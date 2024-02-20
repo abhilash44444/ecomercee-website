@@ -4,12 +4,16 @@ import './App.css'
 import Home from './pages/Home'
 import Cart from './pages/Cart'
 import Navbar from './components/Navbar'
+import store from './store/store'
+import { Provider } from 'react-redux'
+
 
 function App() {
 
 
   return (
-    <>
+  
+    <Provider store={store}>
     <BrowserRouter>
      <Navbar/>
     <Routes> 
@@ -20,7 +24,8 @@ function App() {
     </Routes>
     
     </BrowserRouter>
-    </>
+    </Provider>
+  
   )
 }
 
